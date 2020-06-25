@@ -35,15 +35,20 @@
 - A bearer token strategy that allows the API to be stateless with user auth
 - After successful verification, JWT payload is accessible to the server. Can be used to authorization and identification
 
-- [ ] create a type on the schema string
-- [ ] create a query field for your type in the schema string
-- [ ] create a resolver for your query
-- [ ] add your resolver to the server
-- [ ] start the server and explore your API using GraphQL playground
-
-
 ##### GraphQL
 -------------
+- The core component of every GraphQL server is the `schema`
+- GraphQL schemas are expressed in `SDL` (Schema Definition Language)
+- the structure of an API is defined by the `schema`
+- the behaviour is implemented by `resolver functions`
+
+```js
+type Query {
+  hello: String!
+}
+```
+
+
 - Strongly typed query language and runtime for your data
 - Gives clients the power to describe exactly what data they want
 - Can sit in front of any existing API because its just a query language
