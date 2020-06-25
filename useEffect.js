@@ -16,5 +16,7 @@ useEffect(() => {
 // UseEffect with cleanup
 useEffect(() => {
   dosomething();
-  return clearSomething();
+  return () => {
+    // cleanup
+  }
 });
